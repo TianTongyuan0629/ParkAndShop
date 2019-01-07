@@ -3,9 +3,9 @@
     <div style="height: 48px; width: 850px; margin: 0px auto; margin-top: 10px">
       <p style="height: 48px; width: 100%; line-height: 48px; margin-left: 10px; padding-left: 10px; border-bottom: 2px solid #f40; color: #f40; font-weight: 600">All My Favourite</p>
        <div id="containerSearch" style=" margin-left: 10px; background: rgb(221, 221, 221);">
-        <button style="width: 70px; height: 30px; float: left;border: 0px;"
+        <button style="width: 70px; height: 30px; float: left;border: 0px; outline: none;"
                 :class="{btnSearch: poiSearch == 0}" v-on:click="checkPoiSearch(0)">Good</button>
-        <button style="width: 70px; height: 30px; float: left;border: 0px;"
+        <button style="width: 70px; height: 30px; float: left;border: 0px; outline: none;"
                 :class="{btnSearch: poiSearch == 1}" v-on:click="checkPoiSearch(1)">Shop</button>
         </div>
     </div>
@@ -140,7 +140,7 @@ export default {
     },
 
     goGood: function (info) {
-      this.$router.push({name: 'seller_good', params: {data: info}})
+      this.$router.push({name: 'customer_good', params: {data: info}})
     },
     goShop: function (info) {
       console.log(info.id)
